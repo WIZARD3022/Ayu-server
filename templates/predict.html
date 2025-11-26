@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latest Sensor Values</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Latest Sensor Values</h1>
+    <a href="/" class="btn">Home</a>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Sensor</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for col, val in row_data.items() %}
+            <tr>
+                <td>{{ col }}</td>
+                <td>{{ val }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

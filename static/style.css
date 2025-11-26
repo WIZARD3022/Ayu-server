@@ -1,0 +1,224 @@
+/* ------------------------------ */
+/*        DARK BLUE THEME         */
+/* ------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #e3f6ff;
+
+    /* Animated gradient background */
+    background: linear-gradient(135deg, #021027, #001a38, #00264d, #001a38, #021027);
+    background-size: 400% 400%;
+    animation: bgAnimation 15s ease infinite;
+}
+
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ------------------------------ */
+/*           CONTAINER            */
+/* ------------------------------ */
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    background: rgba(0, 10, 25, 0.75);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(25px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #4dcaff;
+    text-shadow: 0 0 10px #2bdcff;
+}
+
+/* ------------------------------ */
+/*        INPUT & FORM UI         */
+/* ------------------------------ */
+
+input, select {
+    width: 100%;
+    background: rgba(0, 30, 60, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #005f9e;
+    color: #dff6ff;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #00b7ff;
+    box-shadow: 0 0 10px #00c8ff;
+    outline: none;
+}
+
+/* ------------------------------ */
+/*           BUTTONS              */
+/* ------------------------------ */
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #0077ff, #00c8ff);
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.35s;
+    box-shadow: 0 0 12px rgba(0, 200, 255, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.7);
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* COMMON BUTTON BASE */
+button {
+    font-family: 'Poppins', sans-serif;
+    padding: 12px 22px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+
+/* 1️⃣ BLUE GRADIENT BUTTON */
+.btn-blue {
+    background: linear-gradient(135deg, #3a8dff, #0057ff);
+    border: none;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 89, 255, 0.4);
+}
+
+.btn-blue:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 89, 255, 0.6);
+}
+
+
+/* 2️⃣ GLASS BUTTON */
+.btn-glass {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+
+/* 3️⃣ NEON GREEN BUTTON */
+.btn-neon {
+    background: black;
+    color: #00ff91;
+    border: 2px solid #00ff91;
+    text-shadow: 0 0 8px #00ff91;
+    box-shadow: 0 0 10px #00ff91 inset, 0 0 10px #00ff91;
+}
+
+.btn-neon:hover {
+    background: #00ff91;
+    color: black;
+    box-shadow: 0 0 20px #00ff91, 0 0 30px #00ff91 inset;
+    transform: scale(1.05);
+}
+
+/* ------------------------------ */
+/*       QUESTION BLOCKS          */
+/* ------------------------------ */
+
+.question-block {
+    background: rgba(0, 15, 40, 0.75);
+    border-left: 4px solid #00caff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    animation: slideIn 0.6s ease;
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.question-block p {
+    color: #79d7ff;
+    font-weight: 600;
+}
+
+/* ------------------------------ */
+/*         RADIO BUTTONS          */
+/* ------------------------------ */
+
+input[type="radio"] {
+    accent-color: #00caff;
+    transform: scale(1.2);
+}
+
+/* ------------------------------ */
+/*            RECORDS             */
+/* ------------------------------ */
+
+.record {
+    background: rgba(0, 20, 50, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.25);
+    animation: fadeIn 1s ease;
+}
+
+.record p {
+    margin: 6px 0;
+}
+
+/* ------------------------------ */
+/*     SCROLLBAR (NEON STYLE)     */
+/* ------------------------------ */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #001a33;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0099ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00b7ff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #33ccff;
+}

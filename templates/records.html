@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Records</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Saved Records</h2>
+
+      {% for user in data %}
+      <div class="record" style="display: flex">
+        <div>
+          <p><b>Name:</b> {{ user.name }}</p>
+          <p><b>Age:</b> {{ user.age }}</p>
+          <p><b>Gender:</b> {{ user.gender }}</p>
+          <p><b>Mobile:</b> {{ user.mobile }}</p>
+          <p><b>Answers:</b> {{ user.answers }}</p>
+        </div>
+        <div style="align-content: center; padding-left: 55px">
+          <!-- <button style="background-color: yellow">
+            Activate
+          </button> -->
+          <!-- <button onclick="goToData()" style="background-color: yellowgreen">View Record</button> -->
+        </div>
+      </div>
+      {% else %}
+      <p>No records found.</p>
+      {% endfor %}
+    </div>
+    <script>
+      function goToData() {
+        // Redirect to /data page
+        window.location.href = "/data";
+      }
+    </script>
+  </body>
+</html>

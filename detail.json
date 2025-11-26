@@ -1,0 +1,463 @@
+{
+  "Vata": {
+    "GRAINS": {
+      "recommended": [
+        "Barnyard millet",
+        "Foxtail millet",
+        "Pearl millet",
+        "Sorghum",
+        "Finger millet",
+        "Aged rice",
+        "Old wheat",
+        "Sattu"
+      ],
+      "avoid": [
+        "Fresh grains",
+        "Sticky rice",
+        "Processed wheat",
+        "Corn snacks"
+      ]
+    },
+    "LEGUMES": {
+      "recommended": [
+        "Tur dal",
+        "Moong dal",
+        "Masoor dal",
+        "Urad dal (dehusked)",
+        "Green peas",
+        "Chana dal"
+      ],
+      "avoid": [
+        "Horse gram",
+        "Heavy pulses",
+        "Whole urad",
+        "Rajma",
+        "Kala chana"
+      ]
+    },
+    "VEGETABLES": {
+      "recommended": [
+        "Bottle gourd",
+        "Pumpkin",
+        "Carrot",
+        "Drumstick",
+        "Cooked spinach",
+        "French beans",
+        "Beetroot",
+        "Brinjal",
+        "Cabbage"
+      ],
+      "avoid": [
+        "Raw salads",
+        "Raw tomatoes",
+        "Raw onion",
+        "Excess potatoes",
+        "Yam (excess)"
+      ]
+    },
+    "SPICES": {
+      "recommended": [
+        "Hing",
+        "Bay leaf",
+        "Coriander",
+        "Cumin",
+        "Turmeric",
+        "Fennel",
+        "Cinnamon",
+        "Dry ginger",
+        "Mint",
+        "Black salt"
+      ],
+      "avoid": [
+        "Excess chilli",
+        "Garam masala (excess)",
+        "Pepper (excess)",
+        "Raw garlic"
+      ]
+    },
+    "LEAFY_VEG": {
+      "recommended": [
+        "Amaranth",
+        "Cooked spinach",
+        "Tender methi"
+      ],
+      "avoid": [
+        "Raw leafy veggies",
+        "Mustard leaves"
+      ]
+    },
+    "OILS": {
+      "recommended": [
+        "Sesame oil",
+        "Groundnut oil",
+        "Ghee",
+        "Coconut oil"
+      ],
+      "avoid": [
+        "Refined oils",
+        "Safflower oil"
+      ]
+    },
+    "FRUITS": {
+      "recommended": [
+        "Apple",
+        "Grapes",
+        "Pomegranate",
+        "Sweet lime",
+        "Pear",
+        "Papaya",
+        "Jamun",
+        "Berries"
+      ],
+      "avoid": [
+        "Unripe fruits",
+        "Excess mango",
+        "Pineapple (empty stomach)",
+        "Cucumber at night"
+      ]
+    },
+    "NUTS": {
+      "recommended": [
+        "Almonds",
+        "Walnuts",
+        "Raisins",
+        "Figs",
+        "Pistachios",
+        "Makhana"
+      ],
+      "avoid": [
+        "Excess cashew",
+        "Groundnuts",
+        "Dates (hot season)"
+      ]
+    },
+    "DAIRY": {
+      "recommended": [
+        "Warm milk",
+        "Buttermilk",
+        "Fresh curd (day)",
+        "Ghee",
+        "Mild cheese"
+      ],
+      "avoid": [
+        "Cold milk",
+        "Flavoured yogurt",
+        "Excess paneer"
+      ]
+    },
+    "YOGA": {
+      "recommended": [
+        "Anulom Vilom",
+        "Bhramari",
+        "Balasana",
+        "Marjarasana",
+        "Pawanmuktasana",
+        "Mild Surya Namaskar",
+        "Tadasana",
+        "Vajrasana"
+      ],
+      "avoid": [
+        "Shirshasana",
+        "Fast pranayama",
+        "Intense backbends"
+      ]
+    },
+    "FITNESS": {
+      "recommended": [
+        "Brisk walking",
+        "Cycling",
+        "Swimming",
+        "Light strength training",
+        "Yoga stretches"
+      ],
+      "avoid": [
+        "Heavy gym",
+        "Long-distance running",
+        "High-impact workouts"
+      ]
+    }
+  },
+  
+  "Pitta": {
+    "Grains": {
+      "recommended": ["Basmati rice", "Wheat", "Barley", "Oats"],
+      "avoid": ["Fermented grain foods"]
+    },
+    "Legumes": {
+      "recommended": ["Moong dal", "Masoor dal"],
+      "avoid": ["Excess urad dal"]
+    },
+    "Vegetables": {
+      "recommended": ["Zucchini", "Bottle gourd", "Broccoli", "Cucumber"],
+      "avoid": ["Raw onion", "Excess tomato", "Chilli"]
+    },
+    "Spices": {
+      "recommended": ["Coriander", "Fennel", "Turmeric", "Mint"],
+      "avoid": ["Red chilli", "Excess mustard seeds"]
+    },
+    "Leafy Veg": {
+      "recommended": ["Coriander leaves", "Moderate spinach"],
+      "avoid": ["Mustard greens"]
+    },
+    "Oils": {
+      "recommended": ["Ghee", "Coconut oil"],
+      "avoid": ["Excess sesame oil"]
+    },
+    "Fruits": {
+      "recommended": ["Pomegranate", "Sweet lime", "Pears", "Grapes"],
+      "avoid": ["Excess sour fruits", "Raw mango"]
+    },
+    "Nuts": {
+      "recommended": ["Soaked almonds", "Pistachios"],
+      "avoid": ["Excess cashews"]
+    },
+    "Dairy": {
+      "recommended": ["Ghee", "Buttermilk", "Mild cheese"],
+      "avoid": ["Heavy cream", "Ice-cold milk"]
+    },
+    "Yoga": {
+      "recommended": ["Cooling pranayama", "Moon salutations", "Restorative poses"],
+      "avoid": ["Hot yoga", "Intense backbends"]
+    },
+    "Fitness": {
+      "recommended": ["Swimming", "Cycling", "Moderate gym"],
+      "avoid": ["High-heat workouts", "Sprinting in heat"]
+    }
+  },
+
+  "Kapha": {
+    "Grains": {
+      "recommended": ["Barley", "Millets", "Rye"],
+      "avoid": ["Excess wheat", "White rice"]
+    },
+    "Legumes": {
+      "recommended": ["Horse gram", "Moong dal"],
+      "avoid": ["Excess chana dal"]
+    },
+    "Vegetables": {
+      "recommended": ["Bitter gourd", "Pumpkin", "Leafy greens"],
+      "avoid": ["Potato", "Sweet potato"]
+    },
+    "Spices": {
+      "recommended": ["Ginger", "Black pepper", "Turmeric"],
+      "avoid": ["Too little spice"]
+    },
+    "Leafy Veg": {
+      "recommended": ["Methi", "Spinach"],
+      "avoid": []
+    },
+    "Oils": {
+      "recommended": ["Mustard oil", "Minimal ghee"],
+      "avoid": ["Excess coconut oil"]
+    },
+    "Fruits": {
+      "recommended": ["Apples", "Pears", "Berries"],
+      "avoid": ["Banana", "Melons"]
+    },
+    "Nuts": {
+      "recommended": ["Small amounts of almonds"],
+      "avoid": ["Heavy nut mixes"]
+    },
+    "Dairy": {
+      "recommended": ["Buttermilk", "Warm low-fat milk"],
+      "avoid": ["Cream", "Cheese"]
+    },
+    "Yoga": {
+      "recommended": ["Dynamic Surya Namaskar", "Vinyasa flow"],
+      "avoid": ["Only slow passive routines"]
+    },
+    "Fitness": {
+      "recommended": ["Jogging", "Skipping", "Strength training"],
+      "avoid": ["Sedentary habits"]
+    }
+  },
+
+  "Vata-Pitta": {
+    "Grains": {
+      "recommended": ["Aged rice", "Barley", "Basmati rice", "Oats", "Warm-prepared millets", "Wheat"],
+      "avoid": ["Dry corn snacks", "Fermented grain foods", "Uncooked grains"]
+    },
+    "Legumes": {
+      "recommended": ["Masoor dal", "Masoor dal (well cooked)", "Moong dal"],
+      "avoid": ["Excess urad dal", "Horse gram", "Rajma"]
+    },
+    "Vegetables": {
+      "recommended": ["Beetroot", "Bottle gourd", "Broccoli", "Carrot", "Cucumber", "Pumpkin", "Zucchini"],
+      "avoid": ["Chilli", "Excess tomato", "Raw onion", "Raw salads"]
+    },
+    "Spices": {
+      "recommended": ["Coriander", "Cumin", "Fennel", "Mild ginger", "Mint", "Turmeric"],
+      "avoid": ["Excess chilli", "Excess mustard seeds", "Raw garlic", "Red chilli"]
+    },
+    "Leafy Veg": {
+      "recommended": ["Cooked methi", "Cooked spinach", "Coriander leaves", "Moderate spinach"],
+      "avoid": ["Mustard greens", "Raw leafy greens"]
+    },
+    "Oils": {
+      "recommended": ["Coconut oil", "Ghee", "Sesame oil"],
+      "avoid": ["Excess sesame oil", "Refined oils"]
+    },
+    "Fruits": {
+      "recommended": ["Banana", "Grapes", "Papaya", "Pears", "Pomegranate", "Ripe mango", "Sweet lime"],
+      "avoid": ["Cucumber at night", "Excess sour fruits", "Raw mango", "Unripe fruits"]
+    },
+    "Nuts": {
+      "recommended": ["Pistachios", "Soaked almonds", "Walnuts"],
+      "avoid": ["Excess cashew", "Groundnuts"]
+    },
+    "Dairy": {
+      "recommended": ["Buttermilk", "Diluted buttermilk", "Ghee", "Mild cheese", "Warm milk"],
+      "avoid": ["Cold milk", "Flavoured yogurt", "Heavy cream", "Ice-cold milk"]
+    },
+    "Yoga": {
+      "recommended": ["Balasana", "Cooling pranayama", "Moon salutations", "Restorative poses", "Slow Surya Namaskar", "Vajrasana"],
+      "avoid": ["Fast pranayama", "Headstands", "Hot yoga", "Intense backbends"]
+    },
+    "Fitness": {
+      "recommended": ["Cycling", "Light strength training", "Moderate gym", "Swimming", "Walking"],
+      "avoid": ["High-heat workouts", "High-impact workouts", "Long-distance running", "Sprinting in heat"]
+    }
+  },
+
+  "Pitta-Kapha": {
+    "Grains": {
+      "recommended": ["Barley", "Basmati rice", "Millets", "Oats", "Rye", "Wheat"],
+      "avoid": ["Excess wheat", "Fermented grain foods", "White rice"]
+    },
+    "Legumes": {
+      "recommended": ["Horse gram", "Masoor dal", "Moong dal"],
+      "avoid": ["Excess chana dal", "Excess urad dal"]
+    },
+    "Vegetables": {
+      "recommended": ["Bitter gourd", "Bottle gourd", "Broccoli", "Cucumber", "Leafy greens", "Pumpkin", "Zucchini"],
+      "avoid": ["Chilli", "Excess tomato", "Potato", "Raw onion", "Sweet potato"]
+    },
+    "Spices": {
+      "recommended": ["Black pepper", "Coriander", "Fennel", "Ginger", "Mint", "Turmeric"],
+      "avoid": ["Excess mustard seeds", "Red chilli", "Too little spice"]
+    },
+    "Leafy Veg": {
+      "recommended": ["Coriander leaves", "Methi", "Moderate spinach", "Spinach"],
+      "avoid": ["Mustard greens"]
+    },
+    "Oils": {
+      "recommended": ["Coconut oil", "Ghee", "Minimal ghee", "Mustard oil"],
+      "avoid": ["Excess coconut oil", "Excess sesame oil"]
+    },
+    "Fruits": {
+      "recommended": ["Apples", "Berries", "Grapes", "Pears", "Pomegranate", "Sweet lime"],
+      "avoid": ["Banana", "Excess sour fruits", "Melons", "Raw mango"]
+    },
+    "Nuts": {
+      "recommended": ["Pistachios", "Small amounts of almonds", "Soaked almonds"],
+      "avoid": ["Excess cashews", "Heavy nut mixes"]
+    },
+    "Dairy": {
+      "recommended": ["Buttermilk", "Ghee", "Mild cheese", "Warm low-fat milk"],
+      "avoid": ["Cheese", "Cream", "Heavy cream", "Ice-cold milk"]
+    },
+    "Yoga": {
+      "recommended": ["Cooling pranayama", "Dynamic Surya Namaskar", "Moon salutations", "Restorative poses", "Vinyasa flow"],
+      "avoid": ["Hot yoga", "Intense backbends", "Only slow passive routines"]
+    },
+    "Fitness": {
+      "recommended": ["Cycling", "Jogging", "Moderate gym", "Skipping", "Strength training", "Swimming"],
+      "avoid": ["High-heat workouts", "Sedentary habits", "Sprinting in heat"]
+    }
+  },
+
+  "Kapha-Vata": {
+    "Grains": {
+      "recommended": ["Aged rice", "Barley", "Millets", "Oats", "Rye", "Warm-prepared millets", "Wheat"],
+      "avoid": ["Dry corn snacks", "Excess wheat", "Uncooked grains", "White rice"]
+    },
+    "Legumes": {
+      "recommended": ["Horse gram", "Masoor dal (well cooked)", "Moong dal"],
+      "avoid": ["Excess chana dal", "Horse gram", "Rajma"]
+    },
+    "Vegetables": {
+      "recommended": ["Beetroot", "Bitter gourd", "Bottle gourd", "Carrot", "Leafy greens", "Pumpkin"],
+      "avoid": ["Potato", "Raw onion", "Raw salads", "Sweet potato"]
+    },
+    "Spices": {
+      "recommended": ["Black pepper", "Coriander", "Cumin", "Ginger", "Mild ginger", "Turmeric"],
+      "avoid": ["Excess chilli", "Raw garlic", "Too little spice"]
+    },
+    "Leafy Veg": {
+      "recommended": ["Cooked methi", "Cooked spinach", "Methi", "Spinach"],
+      "avoid": ["Raw leafy greens"]
+    },
+    "Oils": {
+      "recommended": ["Ghee", "Minimal ghee", "Mustard oil", "Sesame oil"],
+      "avoid": ["Excess coconut oil", "Refined oils"]
+    },
+    "Fruits": {
+      "recommended": ["Apples", "Banana", "Berries", "Papaya", "Pears", "Ripe mango"],
+      "avoid": ["Banana", "Cucumber at night", "Melons", "Unripe fruits"]
+    },
+    "Nuts": {
+      "recommended": ["Small amounts of almonds", "Soaked almonds", "Walnuts"],
+      "avoid": ["Excess cashew", "Groundnuts", "Heavy nut mixes"]
+    },
+    "Dairy": {
+      "recommended": ["Buttermilk", "Diluted buttermilk", "Warm low-fat milk", "Warm milk"],
+      "avoid": ["Cheese", "Cold milk", "Cream", "Flavoured yogurt"]
+    },
+    "Yoga": {
+      "recommended": ["Balasana", "Dynamic Surya Namaskar", "Slow Surya Namaskar", "Vajrasana", "Vinyasa flow"],
+      "avoid": ["Fast pranayama", "Headstands", "Only slow passive routines"]
+    },
+    "Fitness": {
+      "recommended": ["Jogging", "Light strength training", "Skipping", "Strength training", "Swimming", "Walking"],
+      "avoid": ["High-impact workouts", "Long-distance running", "Sedentary habits"]
+    }
+  },
+
+  "Tridoshaj": {
+    "Grains": {
+      "recommended": ["Aged rice", "Barley", "Basmati rice", "Millets", "Oats", "Rye", "Warm-prepared millets", "Wheat"],
+      "avoid": ["Dry corn snacks", "Excess wheat", "Fermented grain foods", "Uncooked grains", "White rice"]
+    },
+    "Legumes": {
+      "recommended": ["Horse gram", "Masoor dal", "Masoor dal (well cooked)", "Moong dal"],
+      "avoid": ["Excess chana dal", "Excess urad dal", "Horse gram", "Rajma"]
+    },
+    "Vegetables": {
+      "recommended": ["Beetroot", "Bitter gourd", "Bottle gourd", "Broccoli", "Carrot", "Cucumber", "Leafy greens", "Pumpkin", "Zucchini"],
+      "avoid": ["Chilli", "Excess tomato", "Potato", "Raw onion", "Raw salads", "Sweet potato"]
+    },
+    "Spices": {
+      "recommended": ["Black pepper", "Coriander", "Cumin", "Fennel", "Ginger", "Mild ginger", "Mint", "Turmeric"],
+      "avoid": ["Excess chilli", "Excess mustard seeds", "Raw garlic", "Red chilli", "Too little spice"]
+    },
+    "Leafy Veg": {
+      "recommended": ["Cooked methi", "Cooked spinach", "Coriander leaves", "Methi", "Moderate spinach", "Spinach"],
+      "avoid": ["Mustard greens", "Raw leafy greens"]
+    },
+    "Oils": {
+      "recommended": ["Coconut oil", "Ghee", "Minimal ghee", "Mustard oil", "Sesame oil"],
+      "avoid": ["Excess coconut oil", "Excess sesame oil", "Refined oils"]
+    },
+    "Fruits": {
+      "recommended": ["Apples", "Banana", "Berries", "Grapes", "Papaya", "Pears", "Pomegranate", "Ripe mango", "Sweet lime"],
+      "avoid": ["Banana", "Cucumber at night", "Excess sour fruits", "Melons", "Raw mango", "Unripe fruits"]
+    },
+    "Nuts": {
+      "recommended": ["Pistachios", "Small amounts of almonds", "Soaked almonds", "Walnuts"],
+      "avoid": ["Excess cashew", "Excess cashews", "Groundnuts", "Heavy nut mixes"]
+    },
+    "Dairy": {
+      "recommended": ["Buttermilk", "Diluted buttermilk", "Ghee", "Mild cheese", "Warm low-fat milk", "Warm milk"],
+      "avoid": ["Cheese", "Cold milk", "Cream", "Flavoured yogurt", "Heavy cream", "Ice-cold milk"]
+    },
+    "Yoga": {
+      "recommended": ["Balasana", "Cooling pranayama", "Dynamic Surya Namaskar", "Moon salutations", "Restorative poses", "Slow Surya Namaskar", "Vajrasana", "Vinyasa flow"],
+      "avoid": ["Fast pranayama", "Headstands", "Hot yoga", "Intense backbends", "Only slow passive routines"]
+    },
+    "Fitness": {
+      "recommended": ["Cycling", "Jogging", "Light strength training", "Moderate gym", "Skipping", "Strength training", "Swimming", "Walking"],
+      "avoid": ["High-heat workouts", "High-impact workouts", "Long-distance running", "Sedentary habits", "Sprinting in heat"]
+    }
+  }
+}
+
