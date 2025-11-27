@@ -7,7 +7,7 @@
   <body>
     <div class="container">
       <h2>Saved Records</h2>
-
+      <a href="/" class="btn">Home</a>
       {% for user in data %}
       <div class="record" style="display: flex">
         <div>
@@ -16,6 +16,7 @@
           <p><b>Gender:</b> {{ user.gender }}</p>
           <p><b>Mobile:</b> {{ user.mobile }}</p>
           <p><b>Answers:</b> {{ user.answers }}</p>
+          <p><b>Pravarti Dosha:</b> {{ user.Dosha }}</p>
         </div>
         <div style="align-content: center; padding-left: 55px">
           <!-- <button style="background-color: yellow">

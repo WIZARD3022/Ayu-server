@@ -1,29 +1,108 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Latest Sensor Values</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-<div class="container">
-    <h1>Latest Sensor Values</h1>
-    <a href="/" class="btn">Home</a>
-    <table border="1" cellpadding="8" cellspacing="0">
-        <thead>
+  <head>
+    <title>Latest Sensor Values & Dosha</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+      }
+      th,
+      td {
+        border: 1px solid #444;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #222;
+        color: white;
+      }
+      h2 {
+        text-align: center;
+      }
+      .section {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Latest Sensor Values & Dosha</h2>
+      <a href="/" class="btn">Home</a>
+
+      <div class="section">
+        <table>
+          <thead>
             <tr>
-                <th>Sensor</th>
-                <th>Value</th>
+              <th>Sensor</th>
+              <th>Value</th>
             </tr>
-        </thead>
-        <tbody>
+          </thead>
+          <tbody>
             {% for col, val in row_data.items() %}
             <tr>
-                <td>{{ col }}</td>
-                <td>{{ val }}</td>
+              <td>{{ col }}</td>
+              <td>{{ val }}</td>
             </tr>
             {% endfor %}
-        </tbody>
-    </table>
-</div>
-</body>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- <div class="section">
+        <h2>Dosha: {{ row_data['Dosha'] }}</h2>
+        {% for category, items in dosha_details.items() %}
+        <h3>{{ category }}</h3>
+        <b>Recommended:</b>
+        <ul>
+            {% for r in items.recommended %}
+            <li>{{ r }}</li>
+            {% endfor %}
+        </ul>
+        <b>Avoid:</b>
+        <ul>
+            {% for a in items.avoid %}
+            <li>{{ a }}</li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div> -->
+
+      <div class="section">
+        <h2>Dosha: {{ row_data['Dosha'] }}</h2>
+        <table border="1" cellpadding="5" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Recommended</th>
+              <th>Avoid</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for category, items in dosha_details.items() %}
+            <tr>
+              <td>{{ category }}</td>
+              <td>
+                <ul>
+                  {% for r in items.recommended %}
+                  <li>{{ r }}</li>
+                  {% endfor %}
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  {% for a in items.avoid %}
+                  <li>{{ a }}</li>
+                  {% endfor %}
+                </ul>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
 </html>

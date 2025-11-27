@@ -75,14 +75,15 @@ input:focus, select:focus {
 
 .btn {
     display: inline-block;
-    padding: 12px 25px;
-    font-size: 18px;
+    padding: 32px 25px;
+    font-size: 24px;
     background: linear-gradient(135deg, #0077ff, #00c8ff);
     color: white;
     border-radius: 12px;
     text-decoration: none;
     cursor: pointer;
     transition: 0.35s;
+    height: 350px;
     box-shadow: 0 0 12px rgba(0, 200, 255, 0.4);
 }
 
@@ -221,4 +222,68 @@ input[type="radio"] {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #33ccff;
+}
+
+/* Make buttons responsive */
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: auto;
+    width: 200px;
+    transition: 0.35s;
+}
+
+/* Make images responsive inside buttons */
+.btn-img {
+    width: 100%;
+    max-width: 150px; /* adjusts for smaller screens */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Make the button container responsive */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 1024px) {
+    .btn {
+        width: 180px;
+    }
+    .btn-img {
+        max-width: 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .btn {
+        width: 150px;
+        font-size: 18px;
+        padding: 15px;
+    }
+    .btn-img {
+        max-width: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn {
+        width: 90%;
+        font-size: 16px;
+    }
+    .btn-img {
+        max-width: 80px;
+    }
 }

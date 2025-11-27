@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, send_file
 import json
 import os
 import requests
@@ -7,6 +7,8 @@ import plotly
 import plotly.express as px
 import io
 from io import BytesIO 
+from collections import Counter
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -42,7 +44,7 @@ def determine_dosha(pulse, temp):
     temp = float(temp)
     dosha = "Healthy"
     if pulse > 80 and temp < 98.4:
-        dosha = "Vat"
+        dosha = "Vata"
     elif pulse > 80 and 98.6 <= temp <= 99:
         dosha = "Vat-Pitta"
     elif 70 <= pulse <= 80 and temp > 99:
@@ -96,12 +98,33 @@ def create_user():
 def save():
     data = load_data()
 
+    answers = [request.form.get(f"q{i}") for i in range(1, 26)]
+    answers = [a for a in answers if a is not None]
+
+    count = Counter(answers)
+    print("Answer counts:", count)
+    # Default Dosha
+    Dosha = "Unknown"
+
+    if len(count) > 0:
+        most_common_char = str(count.most_common(1)[0])[2]
+
+        if most_common_char == "A":
+            Dosha = "Vata"
+        elif most_common_char == "B":
+            Dosha = "Pitta"
+        elif most_common_char == "C":
+            Dosha = "Kapha"
+
+    print("Determined Dosha:", Dosha)
+
     new_entry = {
         "name": request.form["name"],
         "age": request.form["age"],
         "gender": request.form["gender"],
         "mobile": request.form["mobile"],
-        "answers": [request.form.get(f"q{i}") for i in range(1, 26)]
+        "answers": answers,
+        "Dosha": Dosha
     }
 
     data.append(new_entry)
@@ -139,19 +162,97 @@ def guess_numeric_columns(df):
 def data_json():
     try:
         df = fetch_csv_data(CSV_URL)
-        numeric_cols, df = guess_numeric_columns(df)
-        if not numeric_cols:
-            return "No numeric sensor data found."
 
-        # create interactive Plotly figures for all numeric columns
+        # === AUTO-DETECT TIMESTAMP COLUMN (same as before) ===
+        def guess_timestamp_column(df):
+            candidates = ["timestamp", "time", "datetime", "date", "ts"]
+            lower_cols = [c.lower() for c in df.columns]
+            for cand in candidates:
+                if cand in lower_cols:
+                    return df.columns[lower_cols.index(cand)]
+            for col in df.columns:
+                try:
+                    pd.to_datetime(df[col].iloc[0])
+                    return col
+                except:
+                    pass
+            return None
+
+        ts_col = guess_timestamp_column(df)
+
+        if ts_col:
+            df[ts_col] = pd.to_datetime(df[ts_col], errors="coerce")
+            df = df.dropna(subset=[ts_col]).sort_values(by=ts_col)
+            df.rename(columns={ts_col: "datetime"}, inplace=True)
+        else:
+            df["datetime"] = pd.date_range(start="2024-01-01", periods=len(df))
+
+        # === KEEP ONLY LAST 100 RECORDS ===
+        df = df.tail(100).reset_index(drop=True)
+
+        # === CONVERT NUMERIC COLUMNS ===
+        numeric_cols = []
+        for col in df.columns:
+            if col == "datetime":
+                continue
+            try:
+                temp = pd.to_numeric(df[col], errors="coerce")
+                if temp.notna().any():
+                    df[col] = temp
+                    numeric_cols.append(col)
+            except:
+                pass
+
         graphs = []
+
+        # The last datetime (for focusing the graph)
+        last_time = df['datetime'].max()
+        first_time = df['datetime'].min()
+
         for col in numeric_cols:
-            fig = px.line(df, y=col, title=f"Sensor: {col}")
+            fig = px.line(
+                df,
+                x="datetime",
+                y=col,
+                title=f"{col}",
+                template="plotly_dark",
+                markers=True,
+                hover_data={"datetime": True, col: True}
+            )
+
+            # === FORCE GRAPH TO SHOW LAST PART ===
+            fig.update_layout(
+                xaxis=dict(
+                    range=[first_time, last_time],  # show last section
+                    title="Date & Time",
+                ),
+                yaxis_title=col,
+                hovermode="x unified",
+            )
+
             graphs.append(json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder))
 
         return render_template("data_json.html", graphs=graphs)
+
     except Exception as e:
-        return f"Error fetching or parsing CSV: {e}"
+        return f"Error: {e}"
+
+
+
+
+# Route to download CSV
+@app.route("/download_csv")
+def download_csv():
+    try:
+        df = fetch_csv_data(CSV_URL)
+        buffer = BytesIO()
+        df.to_csv(buffer, index=False)
+        buffer.seek(0)
+        return send_file(buffer, as_attachment=True, download_name="sensor_data.csv", mimetype="text/csv")
+    except Exception as e:
+        return f"Error downloading CSV: {e}"
+
+
 
 @app.route("/predict")
 def data_predict():
@@ -188,5 +289,5 @@ def data_predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=8000, debug=True)
 

@@ -30,7 +30,8 @@
             "C",
             "A",
             "A"
-        ]
+        ],
+        "Dosha": "Pitta"
     },
     {
         "name": "Mahesh Kumar",
@@ -63,6 +64,41 @@
             "C",
             "A",
             "A"
-        ]
+        ],
+        "Dosha": "Pitta"
+    },
+    {
+        "name": "Bahadur Singh",
+        "age": "54",
+        "gender": "Male",
+        "mobile": "6453677883",
+        "answers": [
+            "C",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "B",
+            "B",
+            "C",
+            "C",
+            "C",
+            "C",
+            "B",
+            "C",
+            "B",
+            "B",
+            "B",
+            "B",
+            "B",
+            "B",
+            "C",
+            "C",
+            "A",
+            "A",
+            "A"
+        ],
+        "Dosha": "Pitta"
     }
 ]
